@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/fppfurtado/desafio-fiap-crud-biblioteca/issues"
   },
-  "homepage": "https://github.com/fppfurtado/desafio-fiap-crud-biblioteca#readme"
+  "homepage": "https://github.com/fppfurtado/desafio-fiap-crud-biblioteca#readme",
+  "devDependencies": {
+    "tsc": "^2.0.4"
+  }
 }
