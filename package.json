@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/fppfurtado/desafio-fiap-crud-biblioteca#readme",
   "devDependencies": {
+    "nodemon": "^3.1.4",
     "tsc": "^2.0.4"
   }
 }
