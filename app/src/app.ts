@@ -1,4 +1,9 @@
-import { Server } from "./server.js";
+import server from "./server.js";
 
-const server = new Server();
-server.listen();
+const PORT = 3000;
+
+server.listen(PORT, () => {
+    console.log(`servidor http escutando na porta ${PORT}`);
+});
+
+export default server;
