@@ -19,8 +19,9 @@ server.get('/livros/:id', async (req, res) => {
 });
 
 server.post('/livros', (req, res) => {
-    const novoLivro = dao.createBook(JSON.parse(req.body));
-    res.status(201).send(`livro ${novoLivro} criado com sucesso`);
+    const novoLivro = req.body;
+    dao.createBook(novoLivro);
+    res.status(201).send(`livro ${novoLivro.title} criado com sucesso`);
 });
 
 export default server;
