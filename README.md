@@ -27,6 +27,7 @@ type book = {
   isbn,
   year
 }
+```
 
 ## EXECUTANDO A APLICAÇÃO
 Para rodar a aplicação, basta clonar o projeto e executar no terminal os comandos abaixo no diretório raiz do projeto, na ordem:
