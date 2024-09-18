@@ -5,11 +5,13 @@
   "main": "./app/dist/js/app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./app/dist/js/app.js",
+    "test": "concurrently \"echo fernando\" \"echo pedro\" \"echo pena\"",
+    "server": "nodemon ./app/dist/js/app.js",
     "compile": "tsc",
+    "copy": "copyfiles -f app/src/sql/* app/dist/sql",
+    "build": "concurrently \"npm run compile\" \"npm run copy\"",
     "watch": "tsc -w",
-    "start": "concurrently \"npm run watch\" \"npm run dev\""
+    "start": "concurrently \"npm run copy\" \"npm run watch\" \"npm run server\""
   },
   "repository": {
     "type": "git",
@@ -24,10 +26,16 @@
   "homepage": "https://github.com/fppfurtado/desafio-fiap-crud-biblioteca#readme",
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@types/node": "^22.5.5",
+    "@types/sqlite3": "^3.1.11",
+    "concurrently": "^9.0.1",
+    "copyfiles": "^2.4.1",
     "nodemon": "^3.1.4",
     "typescript": "^5.6.2"
   },
   "dependencies": {
-    "express": "^4.21.0"
+    "express": "^4.21.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
   }
 }
