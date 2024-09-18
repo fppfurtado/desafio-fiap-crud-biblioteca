@@ -2,7 +2,7 @@
 ### FIAP POS TECH FULL STACK DEVELOPMENT
 ---
 
-O projeto consiste em uma API CRUD de um Sistema de Gerenciamento de Biblioteca, implementada com Node.js, Typescript e SQLite para a persistência dos dados.
+O projeto consiste em uma API CRUD de um Sistema de Gerenciamento de Biblioteca, implementada com Node.js (v18.16.0), Typescript e SQLite para a persistência dos dados.
 
 A solução implementa as quatro operações básicas de CRUD para a entidade Livro, conforme exigido no Desafio proposto.
 
