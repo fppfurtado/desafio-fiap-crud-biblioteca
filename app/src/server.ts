@@ -24,4 +24,10 @@ server.post('/livros', (req, res) => {
     res.status(201).send(`livro ${novoLivro.title} criado com sucesso`);
 });
 
+server.put('/livros/:id', (req, res) => {
+    const livroAtualizado = req.body;
+    dao.updateBook(livroAtualizado);
+    res.status(200).send(`livro id ${livroAtualizado.id} atualizado com sucesso`);
+})
+
 export default server;

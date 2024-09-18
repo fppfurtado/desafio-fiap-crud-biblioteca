@@ -37,3 +37,9 @@ export async function createBook(book:book) {
     }
   )
 }
+
+export async function updateBook(book: book) {
+  const { id, title, author, isbn, year } = book;
+  const sql = 'UPDATE book SET title = ?, author = ?, isbn = ?, year = ? WHERE id = ?';
+  return await database.run(sql, [title, author, isbn, year, id]);
+}
