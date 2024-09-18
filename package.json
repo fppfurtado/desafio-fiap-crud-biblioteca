@@ -8,7 +8,7 @@
     "test": "concurrently \"echo fernando\" \"echo pedro\" \"echo pena\"",
     "server": "nodemon ./app/dist/js/app.js",
     "compile": "tsc",
-    "copy": "copyfiles -f app/src/sql/* app/dist/sql",
+    "copy": "copyfiles -f app/src/sql/*.sql app/dist/sql",
     "build": "concurrently \"npm run compile\" \"npm run copy\"",
     "watch": "tsc -w",
     "start": "concurrently \"npm run copy\" \"npm run watch\" \"npm run server\""
